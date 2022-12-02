@@ -14,5 +14,6 @@ module "vpc" {
   tags = {
     Terraform = "true"
     Environment = "jenkins_testbuild"
+    Version = "v1.1.0"
   }
 }
