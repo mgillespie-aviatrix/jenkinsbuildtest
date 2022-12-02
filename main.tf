@@ -14,7 +14,7 @@ module "vpc" {
   tags = {
     Terraform = "true"
     Environment = "jenkins_testbuild"
-    Version = "v1.1.7"
+    Version = "v1.1.8"
   }
 }
 
@@ -34,6 +34,6 @@ module "vpc2" {
   tags = {
     Terraform = "true"
     Environment = "jenkins_testbuild1"
-    Version = "v1.1.7"
+    Version = "v1.1.8"
   }
 }
