@@ -1,14 +1,15 @@
 pipeline {
     agent any
     stages {
-        stage('myStage'){
+        stage (“terraform init”) {
             steps {
-                sh 'ls -la' 
+            sh (‘terraform init’)
             }
         }
-        stage('Build') {
-            steps { 
-                sh 'ls' 
+        stage (“terraform Action”) {
+            steps {
+            echo “Terraform action is –> ${action}”
+            sh (‘terraform ${action} –auto-approve’)
             }
         }
     }
