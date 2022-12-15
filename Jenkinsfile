@@ -1,12 +1,12 @@
 pipeline {
     agent any
     stages {
-        stage (“init”) {
+        stage ("Terraform Init") {
             steps {
             sh ("terraform init")
             }
         }
-        stage (“terraform Action”) {
+        stage ("apply") {
             steps {
             echo “Terraform action is –> ${action}”
             sh ("terraform ${action} –auto-approve")
